@@ -4,6 +4,10 @@ m = n.getMonth() + 1;
 d = n.getDate();
 document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 
+$('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+  });
+  
 
 function displayMobileMenu() {
     if (document.getElementById("aboutbutton").style.display == "none" &&
