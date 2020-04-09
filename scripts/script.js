@@ -478,7 +478,7 @@ map.on('load', function() {
             ],
             'circle-opacity': 0.75
         },
-        filter: ['==', ['number', ['get', 'days']], 41]
+        filter: ['==', ['number', ['get', 'days']], 43]
     });
 
     map.addLayer({
@@ -499,7 +499,7 @@ map.on('load', function() {
         'paint': {
             'text-color': 'rgba(0,0,0,0.5)'
         },
-        filter: ['==', ['number', ['get', 'days']], 41]
+        filter: ['==', ['number', ['get', 'days']], 43]
     });
 
     map.addLayer({
