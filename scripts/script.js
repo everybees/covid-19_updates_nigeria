@@ -4,10 +4,10 @@ m = n.getMonth() + 1;
 d = n.getDate();
 document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 
-$('.navbar-collapse a').click(function(){
+$('.navbar-collapse a').click(function() {
     $(".navbar-collapse").collapse('hide');
-  });
-  
+});
+
 
 function displayMobileMenu() {
     if (document.getElementById("aboutbutton").style.display == "none" &&
@@ -639,6 +639,36 @@ map.on('load', function() {
     }
 
     document.getElementById('lagos').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [3.391531071, 6.443261653],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('niger').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [3.391531071, 6.443261653],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('anambra').addEventListener('click', function() {
         // Fly to a random location by offsetting the point
         // by up to 5 degrees.
         map.flyTo({
