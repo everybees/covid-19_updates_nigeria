@@ -482,7 +482,7 @@ map.on('load', function() {
             ],
             'circle-opacity': 0.75
         },
-        filter: ['==', ['number', ['get', 'days']], 43]
+        filter: ['==', ['number', ['get', 'days']], 44]
     });
 
     map.addLayer({
@@ -503,7 +503,7 @@ map.on('load', function() {
         'paint': {
             'text-color': 'rgba(0,0,0,0.5)'
         },
-        filter: ['==', ['number', ['get', 'days']], 43]
+        filter: ['==', ['number', ['get', 'days']], 44]
     });
 
     map.addLayer({
@@ -658,7 +658,7 @@ map.on('load', function() {
         // by up to 5 degrees.
         map.flyTo({
             bearing: 27,
-            center: [3.391531071, 6.443261653],
+            center: [5.469939737, 10.4003587],
             duration: 3000,
             zoom: 9.5,
             pitch: 50,
@@ -673,7 +673,7 @@ map.on('load', function() {
         // by up to 5 degrees.
         map.flyTo({
             bearing: 27,
-            center: [3.391531071, 6.443261653],
+            center: [7.06999711, 6.210433572],
             duration: 3000,
             zoom: 9.5,
             pitch: 50,
