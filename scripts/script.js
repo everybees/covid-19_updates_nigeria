@@ -481,7 +481,7 @@ map.on('load', function() {
                 12, '#AA5E79'
             ],
             'circle-opacity': 0.75
-        }
+        },
         filter: ['==', ['number', ['get', 'days']], 44]
     });
 
