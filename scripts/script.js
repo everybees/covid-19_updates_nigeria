@@ -481,7 +481,7 @@ map.on('load', function() {
                 12, '#AA5E79'
             ],
             'circle-opacity': 0.75
-        },
+        }
         filter: ['==', ['number', ['get', 'days']], 44]
     });
 
@@ -653,36 +653,6 @@ map.on('load', function() {
         });
     });
 
-    document.getElementById('niger').addEventListener('click', function() {
-        // Fly to a random location by offsetting the point
-        // by up to 5 degrees.
-        map.flyTo({
-            bearing: 27,
-            center: [5.469939737, 10.4003587],
-            duration: 3000,
-            zoom: 9.5,
-            pitch: 50,
-            speed: 0.6,
-            // style: 'mapbox://styles/mapbox/streets-v11',
-            essential: true // this animation is considered essential with respect to prefers-reduced-motion
-        });
-    });
-
-    document.getElementById('anambra').addEventListener('click', function() {
-        // Fly to a random location by offsetting the point
-        // by up to 5 degrees.
-        map.flyTo({
-            bearing: 27,
-            center: [7.06999711, 6.210433572],
-            duration: 3000,
-            zoom: 9.5,
-            pitch: 50,
-            speed: 0.6,
-            // style: 'mapbox://styles/mapbox/streets-v11',
-            essential: true // this animation is considered essential with respect to prefers-reduced-motion
-        });
-    });
-
     document.getElementById('fct').addEventListener('click', function() {
         // Fly to a random location by offsetting the point
         // by up to 5 degrees.
@@ -718,6 +688,36 @@ map.on('load', function() {
         map.flyTo({
             bearing: 27,
             center: [3.590002806, 7.970016092],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('niger').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [5.469939737, 10.4003587],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('anambra').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [7.06999711, 6.210433572],
             duration: 3000,
             zoom: 9.5,
             pitch: 50,
