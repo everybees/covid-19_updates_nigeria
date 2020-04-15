@@ -437,7 +437,7 @@ var map = new mapboxgl.Map({
     center: [8.993, 9.807],
     zoom: 4.5,
     maxZoom: 8,
-    // minZoom: 4.23,
+    minZoom: 4.23,
     bearing: start_viz.bearing,
     pitch: start_stats_mobile.pitch
 });
@@ -482,7 +482,7 @@ map.on('load', function() {
             ],
             'circle-opacity': 0.75
         },
-        filter: ['==', ['number', ['get', 'days']], 48]
+        filter: ['==', ['number', ['get', 'days']], 49]
     });
 
     map.addLayer({
@@ -503,7 +503,7 @@ map.on('load', function() {
         'paint': {
             'text-color': 'rgba(0,0,0,0.5)'
         },
-        filter: ['==', ['number', ['get', 'days']], 48]
+        filter: ['==', ['number', ['get', 'days']], 49]
     });
 
     map.addLayer({
@@ -528,7 +528,7 @@ map.on('load', function() {
         'type': 'circle',
         'source': {
             type: 'geojson',
-            data: 'https://raw.githubusercontent.com/everybees/covid-19_nigeria/master/testing_labs.geojson'
+            data: 'https://raw.githubusercontent.com/everybees/covid-19_nigeria/master/lagos%20markets.geojson'
         },
         'layout': {
             'visibility': 'none'
@@ -625,7 +625,7 @@ map.on('load', function() {
         document.getElementById('active-day').innerText = day + ' - ' + date[day];
     });
 
-    var toggleableLayerIds = ['Test Centres', 'Daily Cases', 'Lagos markets'];
+    var toggleableLayerIds = ['Test Centres', 'Daily Cases'];
 
     for (var i = 0; i < toggleableLayerIds.length; i++) {
         var id = toggleableLayerIds[i];
