@@ -524,6 +524,23 @@ map.on('load', function() {
     });
 
     map.addLayer({
+        'id': 'Lagos markets',
+        'type': 'circle',
+        'source': {
+            type: 'geojson',
+            data: 'https://raw.githubusercontent.com/everybees/covid-19_nigeria/master/testing_labs.geojson'
+        },
+        'layout': {
+            'visibility': 'none'
+        },
+        'paint': {
+            'circle-radius': 7,
+            'circle-color': 'green'
+        },
+        'filter': ['==', '$type', 'Point']
+    });
+
+    map.addLayer({
         'id': 'boundary',
         'type': 'fill',
         'source': {
@@ -608,7 +625,7 @@ map.on('load', function() {
         document.getElementById('active-day').innerText = day + ' - ' + date[day];
     });
 
-    var toggleableLayerIds = ['Test Centres', 'Daily Cases'];
+    var toggleableLayerIds = ['Test Centres', 'Daily Cases', 'Lagos markets'];
 
     for (var i = 0; i < toggleableLayerIds.length; i++) {
         var id = toggleableLayerIds[i];
