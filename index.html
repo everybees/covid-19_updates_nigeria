@@ -60,32 +60,43 @@
                 <div class="col-sm-4">
                     <h5 style="margin-left: 10%">CASES | Nigeria</h5>
                     <div class="jumbotron" style="padding-top: 1%; padding-bottom: 1%; height: 200px">
-                        <div id="cases">
-                            <h3 id="fonting"><img src="assets/files.svg" style="height: 30px"> Confirmed: 627</h3>
+                        <div id="case">
+                            <h3 id="fonting"><img src="assets/files.svg" style="height: 30px"> Confirmed:
+                                <span id="cases"></span>
+                            </h3>
                         </div>
 
                         <div id="recoveries">
-                            <h3 id="fonting"><img src="assets/patient.svg" style="height: 30px"> Recovered: 170</h3>
+                            <h3 id="fonting"><img src="assets/patient.svg" style="height: 30px"> Recovered:
+                                <span id="recover"></span>
+                            </h3>
                         </div>
 
                         <div id="deaths">
-                            <h3 id="fonting"><img src="assets/death.svg" style="height: 30px"> Deaths: 21</h3>
+                            <h3 id="fonting"><img src="assets/death.svg" style="height: 30px"> Deaths:
+                                <span id="death"></span>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <h5 style="margin-left: 10%">CASES | Global</h5>
                     <div class="jumbotron" style="padding-top: 1%; padding-bottom: 1%; height: 200px">
-                        <div id="cases">
-                            <h3 id="fonting"><img src="assets/files.svg" style="height: 30px"> Confirmed: 2,406,240</h3>
+                        <div id="case">
+                            <h3 id="fonting"><img src="assets/files.svg" style="height: 30px"> Confirmed: 2,436,951
+                            </h3>
                         </div>
 
                         <div id="recoveries">
-                            <h3 id="fonting"><img src="assets/patient.svg" style="height: 30px"> Recovered: 624,914</h3>
+                            <h3 id="fonting"><img src="assets/patient.svg" style="height: 30px"> Recovered: 638,078
+                                <span id="newrecovery"></span>
+                            </h3>
                         </div>
 
                         <div id="deaths">
-                            <h3 id="fonting"><img src="assets/death.svg" style="height: 30px"> Deaths: 165,004</h3>
+                            <h3 id="fonting"><img src="assets/death.svg" style="height: 30px"> Deaths: 167,296
+                                <span id="totalDeaths"></span>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -99,28 +110,43 @@
                         </span>
                     </h5>
                     <marquee behavior="scroll" style="font-family:Arial, sans-serif; font-size: 15px;  background-color: black; color: white;" direction="left" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
-                        <a id="lagos">LAGOS: 376</a> |
-                        <a id="fct">FCT: 88</a> |
-                        <a id="kano">KANO: 36</a>
-                        <a id="osun">OSUN: 20</a> |
-                        <a id="oyo">OYO: 16</a> |
-                        <a id="edo">EDO: 15</a> |
-                        <a id="ogun">OGUN: 12</a> |
-                        <a id="katsina">KATSINA: 12</a> |
-                        <a id="kwara">KWARA: 9</a> |
-                        <a id="bauchi">BAUCHI: 7</a> |
-                        <a id="kaduna">KADUNA: 6</a> |
-                        <a id="akwaibom">AWKA IBOM: 9</a> |
-                        <a id="delta">DELTA: 4</a> |
-                        <a id="ondo">ONDO: 3</a> |
-                        <a id="ekiti">EKITI: 3</a> |
-                        <a id="enugu">ENUGU: 2</a> |
-                        <a id="rivers">RIVERS: 2</a> |
-                        <a id="niger">NIGER: 2</a> |
-                        <a id="jigawa">JIGAWA: 2</a>
-                        <a id="benue">BENUE: 1</a> |
-                        <a id="anambra">ANAMBRA: 1</a> |
-                        <a id="borno">BORNO: 1</a>
+                        <a id="lagos"></a><span id="lagosCases"></span>
+                        <a id="fct"></a><span id="fctCases"></span>
+                        <a id="abia"></a><span id="abiaCases"></span>
+                        <a id="adamawa"></a><span id="adamawaCases"></span>
+                        <a id="akwa"></a><span id="akwaCases"></span>
+                        <a id="anambra"></a><span id="anambraCases"></span>
+                        <a id="bauchi"></a><span id="bauchiCases"></span>
+                        <a id="bayelsa"></a><span id="bayelsaCases"></span>
+                        <a id="benue"></a><span id="benueCases"></span>
+                        <a id="borno"></a><span id="bornoCases"></span>
+                        <a id="cross"></a><span id="crossCases"></span>
+                        <a id="delta"></a><span id="deltaCases"></span>
+                        <a id="ebonyi"></a><span id="ebonyiCases"></span>
+                        <a id="edo"></a><span id="edoCases"></span>
+                        <a id="ekiti"></a><span id="ekitiCases"></span>
+                        <a id="enugu"></a><span id="enuguCases"></span>
+                        <a id="gombe"></a><span id="gombeCases"></span>
+                        <a id="imo"></a><span id="imoCases"></span>
+                        <a id="jigawa"></a><span id="jigawaCases"></span>
+                        <a id="kaduna"></a><span id="kadunaCases"></span>
+                        <a id="kano"></a><span id="kanoCases"></span>
+                        <a id="katsina"></a><span id="katsinaCases"></span>
+                        <a id="kebbi"></a><span id="kebbiCases"></span>
+                        <a id="kogi"></a><span id="kogiCases"></span>
+                        <a id="kwara"></a><span id="kwaraCases"></span>
+                        <a id="nassarawa"></a><span id="nassarawaCases"></span>
+                        <a id="niger"></a><span id="nigerCases"></span>
+                        <a id="ogun"></a><span id="ogunCases"></span>
+                        <a id="ondo"></a><span id="ondoCases"></span>
+                        <a id="osun"></a><span id="osunCases"></span>
+                        <a id="oyo"></a><span id="oyoCases"></span>
+                        <a id="plateau"></a><span id="plateauCases"></span>
+                        <a id="rivers"></a><span id="riversCases"></span>
+                        <a id="sokoto"></a><span id="sokotoCases"></span>
+                        <a id="taraba"></a><span id="tarabaCases"></span>
+                        <a id="yobe"></a><span id="yobeCases"></span>
+                        <a id="zamfara"></a><span id="zamfaraCases"></span>
 
                     </marquee>
 
@@ -141,8 +167,8 @@
 
                     </div>
                     <div class='controlcontainer'>
-                        <small>Day: <label id='active-day'>52 : 18/Apr/2020</label></small>
-                        <input id='slider' class='row' type='range' min='1' max='53' step='1' value='52' />
+                        <small>Day: <label id='active-day'>53 : 19/Apr/2020</label></small>
+                        <input id='slider' class='row' type='range' min='1' max='54' step='1' value='53' />
                     </div>
 
                     <br>
@@ -167,7 +193,6 @@
                     </div>
                 </div>
             </div>
-
             <script type="text/javascript" src="scripts/script.js"></script>
 
 
@@ -310,3 +335,4 @@
 </body>
 
 </html>
+<script type="text/javascript" src="scripts/covidjs.js"></script>

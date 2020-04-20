@@ -482,7 +482,7 @@ map.on('load', function() {
             ],
             'circle-opacity': 0.75
         },
-        filter: ['==', ['number', ['get', 'days']], 52]
+        filter: ['==', ['number', ['get', 'days']], 53]
     });
 
     map.addLayer({
@@ -503,7 +503,7 @@ map.on('load', function() {
         'paint': {
             'text-color': 'rgba(0,0,0,0.5)'
         },
-        filter: ['==', ['number', ['get', 'days']], 52]
+        filter: ['==', ['number', ['get', 'days']], 53]
     });
 
     map.addLayer({
@@ -730,6 +730,21 @@ map.on('load', function() {
         });
     });
 
+    document.getElementById('kwara').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [4.3874, 8.9669],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
     document.getElementById('anambra').addEventListener('click', function() {
         // Fly to a random location by offsetting the point
         // by up to 5 degrees.
@@ -938,7 +953,7 @@ map.on('load', function() {
     });
 
 
-    document.getElementById('akwaibom').addEventListener('click', function() {
+    document.getElementById('akwa').addEventListener('click', function() {
         // Fly to a random location by offsetting the point
         // by up to 5 degrees.
         map.flyTo({
