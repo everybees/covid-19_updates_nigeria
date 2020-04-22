@@ -3,45 +3,9 @@
 var covid_date = new Date();
 document.getElementById("date").innerHTML = covid_date.toDateString();
 
-//For all dashboards, Get confirmed cases, recovery, deaths
-
-var dash = new XMLHttpRequest()
-
-dash.open('GET', 'https://api.covid19api.com/summary', true)
-    //call the onload 
-dash.onload = function() {
-        //check if the status is 200(means everything is okay)
-        if (this.status === 200) {
-            var data = JSON.parse(this.responseText).Countries;
-            var globalStat = JSON.parse(this.responseText).Global;
-
-            for (i in data) {
-
-                if (data[i].Country == "Nigeria") {
-                    document.getElementById("cases").innerHTML = data[i].TotalConfirmed
-                    document.getElementById("death").innerHTML = data[i].TotalDeaths
-                    document.getElementById("recover").innerHTML = data[i].TotalRecovered
-                    document.getElementById("active").innerHTML = data[i].TotalConfirmed - (data[i].TotalDeaths + data[i].TotalRecovered)
-                    document.getElementById('closed').innerHTML = data[i].TotalDeaths + data[i].TotalRecovered
-                    document.getElementById("newcon").innerHTML = data[i].NewConfirmed
-                    document.getElementById("newrecovery").innerHTML = data[i].NewRecovered
-                }
-
-            }
-
-            if (globalStat != 0) {
-                document.getElementById("actives").innerHTML = globalStat.TotalConfirmed
-                document.getElementById("totalRecovery").innerHTML = globalStat.TotalRecovered.toLocaleString();
-                document.getElementById("totalDeaths").innerHTML = globalStat.TotalDeaths.toLocaleString();
-            }
-        }
-    }
-    //call send
-dash.send();
-
 //For states table
 const tBoddy = document.getElementById("tableBody")
-fetch('https://covid-19-countries.herokuapp.com/countries/nigeria').then(function(response) {
+fetch('https://raw.githubusercontent.com/everybees/covid-19_nigeria/master/nigeria.json').then(function(response) {
     return response.json();
 }).then(function(data) {
     let cases_list = data[0].states
@@ -191,6 +155,15 @@ fetch('https://covid-19-countries.herokuapp.com/countries/nigeria').then(functio
         if (cases_list[i].name === "Zamfara" && cases_list[i].cases !== 0) {
             document.getElementById("zamfara").innerHTML = cases_list[i].name + ': ';
             document.getElementById("zamfaraCases").innerHTML = cases_list[i].cases + ' |';
+        }
+        if (cases_list[i].name === "Total Cases" && cases_list[i].cases !== 0) {
+            document.getElementById("totalCases").innerHTML = cases_list[i].cases;
+        }
+        if (cases_list[i].name === "Total Recovered" && cases_list[i].cases !== 0) {
+            document.getElementById("totalRecovered").innerHTML = cases_list[i].cases;
+        }
+        if (cases_list[i].name === "Total Deaths" && cases_list[i].cases !== 0) {
+            document.getElementById("totalDeaths").innerHTML = cases_list[i].cases;
         }
         let states = cases_list[i].name;
         let cases = cases_list[i].cases;
