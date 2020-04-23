@@ -165,6 +165,15 @@ fetch('https://raw.githubusercontent.com/everybees/covid-19_nigeria/master/niger
         if (cases_list[i].name === "Total Deaths" && cases_list[i].cases !== 0) {
             document.getElementById("totalDeaths").innerHTML = cases_list[i].cases;
         }
+        if (cases_list[i].name === "World Cases" && cases_list[i].cases !== 0) {
+            document.getElementById("worldCases").innerHTML = cases_list[i].cases.toLocaleString();
+        }
+        if (cases_list[i].name === "World Recovered" && cases_list[i].cases !== 0) {
+            document.getElementById("worldRecovered").innerHTML = cases_list[i].cases.toLocaleString();
+        }
+        if (cases_list[i].name === "World Deaths" && cases_list[i].cases !== 0) {
+            document.getElementById("worldDeaths").innerHTML = cases_list[i].cases.toLocaleString();
+        }
         let states = cases_list[i].name;
         let cases = cases_list[i].cases;
         data1 = {

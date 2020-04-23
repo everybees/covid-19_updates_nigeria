@@ -482,7 +482,7 @@ map.on('load', function() {
             ],
             'circle-opacity': 0.75
         },
-        filter: ['==', ['number', ['get', 'days']], 53]
+        filter: ['==', ['number', ['get', 'days']], 55]
     });
 
     map.addLayer({
@@ -503,7 +503,7 @@ map.on('load', function() {
         'paint': {
             'text-color': 'rgba(0,0,0,0.5)'
         },
-        filter: ['==', ['number', ['get', 'days']], 53]
+        filter: ['==', ['number', ['get', 'days']], 55]
     });
 
     map.addLayer({
@@ -686,6 +686,21 @@ map.on('load', function() {
         });
     });
 
+    document.getElementById('abia').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [7.5248, 5.4527],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
     document.getElementById('osun').addEventListener('click', function() {
         // Fly to a random location by offsetting the point
         // by up to 5 degrees.
@@ -736,6 +751,36 @@ map.on('load', function() {
         map.flyTo({
             bearing: 27,
             center: [4.3874, 8.9669],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('gombe').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [11.1731, 10.2791],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('sokoto').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [5.2476, 13.0059],
             duration: 3000,
             zoom: 9.5,
             pitch: 50,
