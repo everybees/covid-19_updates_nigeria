@@ -157,7 +157,7 @@ fetch('https://raw.githubusercontent.com/everybees/covid-19_nigeria/master/niger
             document.getElementById("zamfaraCases").innerHTML = cases_list[i].cases + ' |';
         }
         if (cases_list[i].name === "Total Cases" && cases_list[i].cases !== 0) {
-            document.getElementById("totalCases").innerHTML = cases_list[i].cases;
+            document.getElementById("totalCases").innerHTML = cases_list[i].cases.toLocaleString();
         }
         if (cases_list[i].name === "Total Recovered" && cases_list[i].cases !== 0) {
             document.getElementById("totalRecovered").innerHTML = cases_list[i].cases;
