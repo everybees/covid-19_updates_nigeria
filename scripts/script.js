@@ -620,6 +620,7 @@ map.on('load', function() {
             '2/Apr/2020', '3/Apr/2020', '4/Apr/2020', '5/Apr/2020', '6/Apr/2020', '7/Apr/2020', '8/Apr/2020', '9/Apr/2020',
             '10/Apr/2020', '11/Apr/2020', '12/Apr/2020', '13/Apr/2020', '14/Apr/2020', '15/Apr/2020', '16/Apr/2020', '17/Apr/2020',
             '18/Apr/2020', '19/Apr/2020', '20/Apr/2020', '21/Apr/2020', '22/Apr/2020', '23/Apr/2020', '24/Apr/2020', '25/Apr/2020',
+            '26/Apr/2020', '27/Apr/2020', '28/Apr/2020', '29/Apr/2020', '30/Apr/2020', '1/May/2020', '2/May/2020', '3/May/2020',
         ];
 
         // update text in the UI
@@ -909,12 +910,42 @@ map.on('load', function() {
         });
     });
 
+    document.getElementById('zamfara').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [6.2236, 12.1222],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
     document.getElementById('enugu').addEventListener('click', function() {
         // Fly to a random location by offsetting the point
         // by up to 5 degrees.
         map.flyTo({
             bearing: 27,
             center: [7.383362995, 6.867034321],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('imo').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [7.0588, 5.5720],
             duration: 3000,
             zoom: 9.5,
             pitch: 50,
