@@ -482,7 +482,7 @@ map.on('load', function() {
             ],
             'circle-opacity': 0.75
         },
-        filter: ['==', ['number', ['get', 'days']], 58]
+        filter: ['==', ['number', ['get', 'days']], 59]
     });
 
     map.addLayer({
@@ -503,7 +503,7 @@ map.on('load', function() {
         'paint': {
             'text-color': 'rgba(0,0,0,0.5)'
         },
-        filter: ['==', ['number', ['get', 'days']], 58]
+        filter: ['==', ['number', ['get', 'days']], 59]
     });
 
     map.addLayer({
@@ -767,6 +767,66 @@ map.on('load', function() {
         map.flyTo({
             bearing: 27,
             center: [11.1731, 10.2791],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('bayelsa').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [6.0699, 4.7719],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('ebonyi').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [8.0137, 6.2649],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('taraba').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [10.7740, 7.9994],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
+    document.getElementById('kebbi').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [4.2333, 11.4942],
             duration: 3000,
             zoom: 9.5,
             pitch: 50,
