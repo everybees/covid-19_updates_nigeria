@@ -776,6 +776,21 @@ map.on('load', function() {
         });
     });
 
+    document.getElementById('yobe').addEventListener('click', function() {
+        // Fly to a random location by offsetting the point
+        // by up to 5 degrees.
+        map.flyTo({
+            bearing: 27,
+            center: [11.4390, 12.2939],
+            duration: 3000,
+            zoom: 9.5,
+            pitch: 50,
+            speed: 0.6,
+            // style: 'mapbox://styles/mapbox/streets-v11',
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    });
+
     document.getElementById('bayelsa').addEventListener('click', function() {
         // Fly to a random location by offsetting the point
         // by up to 5 degrees.
@@ -1119,7 +1134,7 @@ map.on('load', function() {
         });
     });
 
-     document.getElementById('adamawa').addEventListener('click', function() {
+    document.getElementById('adamawa').addEventListener('click', function() {
         // Fly to a random location by offsetting the point
         // by up to 5 degrees.
         map.flyTo({
@@ -1134,7 +1149,7 @@ map.on('load', function() {
         });
     });
 
-     document.getElementById('plateau').addEventListener('click', function() {
+    document.getElementById('plateau').addEventListener('click', function() {
         // Fly to a random location by offsetting the point
         // by up to 5 degrees.
         map.flyTo({
