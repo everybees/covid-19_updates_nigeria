@@ -14,7 +14,7 @@ fetch('https://raw.githubusercontent.com/everybees/covid-19_nigeria/master/niger
     for (i in cases_list) {
         if (cases_list[i].name === "Lagos") {
             document.getElementById("lagos").innerHTML = cases_list[i].name + ': ';
-            document.getElementById("lagosCases").innerHTML = cases_list[i].cases + ' |';
+            document.getElementById("lagosCases").innerHTML = cases_list[i].cases.toLocaleString() + ' |';
         }
         if (cases_list[i].name === "Abuja Federal Capital Territor" && cases_list[i].cases !== 0) {
             document.getElementById("fct").innerHTML = cases_list[i].name + 'y: ';
