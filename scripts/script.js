@@ -902,7 +902,7 @@ map.on('load', function() {
         // by up to 5 degrees.
         map.flyTo({
             bearing: 27,
-            center: [11.8846, 13.1520],
+            center: [13.1520, 11.8846],
             duration: 3000,
             zoom: 9.5,
             pitch: 50,
