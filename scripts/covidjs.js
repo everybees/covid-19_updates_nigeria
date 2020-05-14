@@ -94,7 +94,7 @@ fetch('https://raw.githubusercontent.com/everybees/covid-19_nigeria/master/niger
         }
         if (cases_list[i].name === "Kano" && cases_list[i].cases !== 0) {
             document.getElementById("kano").innerHTML = cases_list[i].name + ': ';
-            document.getElementById("kanoCases").innerHTML = cases_list[i].cases + ' |';
+            document.getElementById("kanoCases").innerHTML = cases_list[i].cases.toLocaleString() + ' |';
         }
         if (cases_list[i].name === "Katsina" && cases_list[i].cases !== 0) {
             document.getElementById("katsina").innerHTML = cases_list[i].name + ': ';
@@ -160,10 +160,10 @@ fetch('https://raw.githubusercontent.com/everybees/covid-19_nigeria/master/niger
             document.getElementById("totalCases").innerHTML = cases_list[i].cases.toLocaleString();
         }
         if (cases_list[i].name === "Total Recovered" && cases_list[i].cases !== 0) {
-            document.getElementById("totalRecovered").innerHTML = cases_list[i].cases;
+            document.getElementById("totalRecovered").innerHTML = cases_list[i].cases.toLocaleString();
         }
         if (cases_list[i].name === "Total Deaths" && cases_list[i].cases !== 0) {
-            document.getElementById("totalDeaths").innerHTML = cases_list[i].cases;
+            document.getElementById("totalDeaths").innerHTML = cases_list[i].cases.toLocaleString();
         }
         if (cases_list[i].name === "World Cases" && cases_list[i].cases !== 0) {
             document.getElementById("worldCases").innerHTML = cases_list[i].cases.toLocaleString();
