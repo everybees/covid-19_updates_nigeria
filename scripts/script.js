@@ -482,7 +482,7 @@ map.on('load', function() {
             ],
             'circle-opacity': 0.75
         },
-        filter: ['==', ['number', ['get', 'days']], 76]
+        filter: ['==', ['number', ['get', 'days']], 80]
     });
 
     map.addLayer({
@@ -503,7 +503,7 @@ map.on('load', function() {
         'paint': {
             'text-color': 'rgba(0,0,0,0.5)'
         },
-        filter: ['==', ['number', ['get', 'days']], 76]
+        filter: ['==', ['number', ['get', 'days']], 80]
     });
 
     map.addLayer({
@@ -623,6 +623,7 @@ map.on('load', function() {
             '26/Apr/2020', '27/Apr/2020', '28/Apr/2020', '29/Apr/2020', '30/Apr/2020', '1/May/2020', '2/May/2020', '3/May/2020',
             '4/May/2020', '5/May/2020', '6/May/2020', '7/May/2020', '8/May/2020', '9/May/2020', '10/May/2020', '11/May/2020',
             '12/May/2020', '13/May/2020', '14/May/2020', '15/May/2020', '16/May/2020', '17/May/2020', '18/May/2020', '19/May/2020',
+            '20/May/2020', '21/May/2020', '22/May/2020', '23/May/2020', '24/May/2020', '25/May/2020', '26/May/2020', '27/May/2020',
         ];
 
         // update text in the UI
